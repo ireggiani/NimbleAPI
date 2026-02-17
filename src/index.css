@@ -1,0 +1,113 @@
+:root {
+  --win-bg: #c0c0c0;
+  --win-white: #ffffff;
+  --win-grey-light: #dfdfdf;
+  --win-grey-dark: #808080;
+  --win-black: #000000;
+  --win-blue: #000080;
+  --win-blue-light: #1084d0;
+  --win-font: 'MS Sans Serif', Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #008080; /* Classic Teal background */
+  color: var(--win-black);
+  font-family: var(--win-font);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 3D Borders */
+.outset-border {
+  border-top: 2px solid var(--win-white);
+  border-left: 2px solid var(--win-white);
+  border-right: 2px solid var(--win-grey-dark);
+  border-bottom: 2px solid var(--win-grey-dark);
+  background: var(--win-bg);
+}
+
+.inset-border {
+  border-top: 2px solid var(--win-grey-dark);
+  border-left: 2px solid var(--win-grey-dark);
+  border-right: 2px solid var(--win-white);
+  border-bottom: 2px solid var(--win-white);
+  background: var(--win-white);
+}
+
+.button-border {
+  border-top: 2px solid var(--win-white);
+  border-left: 2px solid var(--win-white);
+  border-right: 2px solid var(--win-black);
+  border-bottom: 2px solid var(--win-black);
+  box-shadow: inset 1px 1px 0px var(--win-grey-light), inset -1px -1px 0px var(--win-grey-dark);
+  background: var(--win-bg);
+}
+
+.button-border:active:not(:disabled) {
+  border-top: 2px solid var(--win-black);
+  border-left: 2px solid var(--win-black);
+  border-right: 2px solid var(--win-white);
+  border-bottom: 2px solid var(--win-white);
+  box-shadow: none;
+  padding: 1px 0 0 1px;
+}
+
+button:disabled {
+  color: var(--win-grey-dark);
+  text-shadow: 1px 1px var(--win-white);
+}
+
+input {
+  font-family: var(--win-font);
+  padding: 4px;
+  outline: none;
+}
+
+.title-bar {
+  background: linear-gradient(90deg, var(--win-blue), var(--win-blue-light));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 2px 3px 4px;
+  font-weight: bold;
+  height: 20px;
+}
+
+.title-bar-text {
+    font-size: 12px;
+}
+
+.title-bar-controls {
+  display: flex;
+}
+
+.title-bar-button {
+  width: 16px;
+  height: 14px;
+  background: var(--win-bg);
+  border: 1px solid var(--win-black);
+  box-shadow: inset 1px 1px var(--win-white), inset -1px -1px var(--win-grey-dark);
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  cursor: default;
+}
+
+.window {
+  width: 500px;
+  max-width: 95vw;
+}
+
+.window-body {
+  padding: 10px;
+}
