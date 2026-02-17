@@ -44,6 +44,7 @@ function App() {
         uuid: candidate.uuid,
         jobId: jobId,
         candidateId: candidate.candidateId,
+        applicationId: candidate.applicationId,
         repoUrl: repoUrl,
       };
       await api.applyToJob(payload);
@@ -81,6 +82,9 @@ function App() {
         </Window>
       ) : (
         <Window title={`Welcome, ${candidate.firstName} ${candidate.lastName}`}>
+          <div style={{ marginBottom: '15px', fontSize: '11px', padding: '5px', background: '#e1e1e1' }} className="inset-border">
+            <strong>Candidate ID:</strong> {candidate.candidateId} | <strong>Application ID:</strong> {candidate.applicationId} | <strong>UUID:</strong> {candidate.uuid}
+          </div>
           <div style={{ marginBottom: '15px' }}>
             <p style={{ fontSize: '14px', fontWeight: 'bold' }}>Available Positions:</p>
             <div className="inset-border" style={{ maxHeight: '300px', overflowY: 'auto', padding: '10px', background: '#fff' }}>
